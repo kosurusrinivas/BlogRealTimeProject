@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'BlogApp/base.html' %}
+{% block content %}
+    <div style="color: black">
+        <h1>Update User Data Here</h1>
+        <form method="post">
+            User-Firstname: <input type="text" name="first_name" value="{{user.first_name}}"><p></p>
+            User-Lastname: <input type="text" name="last_name" value="{{user.last_name}}"><p></p>
+            User-Email: <input type="text" name="email" value="{{user.email}}"><p></p>
+            User-Username: <input type="text" name="username" value="{{user.username}}"> <p></p>
+            {% csrf_token %}
+            <button type="submit">Submit</button>
+            <a href="/tag/"><button type="button">Back</button></a>
+        </form>
+    </div>
+{% endblock %}
